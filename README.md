@@ -246,13 +246,182 @@ http://localhost:5173
 
 ---
 
-## Default Organizer Credentials
+## Project Structure
 
-Use the following credentials to log in as the organizer.
+```text
+DBMS_PROJECT/
+├── backend/
+│   ├── db.js                     # MySQL connection configuration
+│   ├── server.js                 # Express server initialization and API routing
+│   ├── package.json              # Backend dependencies and scripts
+│   ├── package-lock.json         # Dependency lock file
+│   ├── middleware/
+│   │   ├── authMiddleware.js     # Participant authentication middleware
+│   │   └── organizerAuth.js      # Organizer authentication middleware
+│   └── routes/
+│       ├── auth.js               # Participant login APIs
+│       ├── signup.js             # User registration APIs
+│       ├── register.js           # Event registration APIs
+│       ├── organizer.js          # Organizer dashboard, analytics, and event management APIs
+│       └── participant.js        # Participant dashboard and registered events APIs
+│
+├── frontend/
+│   └── myapp/
+│       ├── index.html            # Entry HTML file
+│       ├── vite.config.js        # Vite configuration
+│       ├── package.json          # Frontend dependencies and scripts
+│       ├── package-lock.json     # Dependency lock file
+│       ├── public/
+│       │   └── images/           # Application images and assets
+│       └── src/
+│           ├── main.jsx          # React application entry point
+│           ├── App.jsx           # Application routing and signup page
+│           ├── index.css         # Global styles
+│           ├── components/
+│           │   ├── LoginForm.jsx
+│           │   ├── LoginForm.css
+│           │   ├── Navbar.jsx
+│           │   ├── Navbar.css
+│           │   ├── ParticipantNavbar.jsx
+│           │   ├── ParticipantNavbar.css
+│           │   ├── OrganizerNavbar.jsx
+│           │   ├── OrganizerNavbar.css
+│           │   ├── Sidebar.jsx
+│           │   └── Sidebar.css
+│           └── pages/
+│               ├── Login.jsx
+│               ├── Login.css
+│               ├── Events.jsx
+│               ├── Events.css
+│               ├── Register.jsx
+│               ├── Register.css
+│               ├── Pregister.jsx
+│               ├── pregister.css
+│               ├── ParticipantDashboard.jsx
+│               ├── ParticipantDashboard.css
+│               ├── OrganizerDashboard.jsx
+│               ├── OrganizerDashboard.css
+│               ├── Contact.jsx
+│               └── Contact.css
+│
+├── PROJECT_REPORT.md             # Project documentation
+├── .gitignore                    # Git ignore rules
+└── README.md                     # Project documentation
+```
+
+## Usage
+
+Once the frontend and backend servers are running, access the application by opening the following URL in your browser:
+
+```text
+http://localhost:5173
+```
+
+---
+
+### Participant Workflow
+
+#### 1. Create an Account
+
+- Open the application in your browser.
+- On the **Sign Up** page, enter:
+  - Full Name
+  - Email Address
+  - Password
+  - Phone Number
+- Click **Sign Up** to create a participant account.
+
+#### 2. Login
+
+- Navigate to the **Login** page.
+- Select **Login as Participant**.
+- Enter your registered email address and password.
+- Click **Login** to access your account.
+
+#### 3. Browse Events
+
+- Open the **Events** page.
+- Browse the available technical events across different categories.
+- Select any event to view its details.
+
+#### 4. Register for an Event
+
+- Click **Register Now** for the desired event.
+- Complete the registration form.
+- If you are logged in, the registration will automatically be associated with your participant account.
+
+#### 5. Participant Dashboard
+
+Navigate to the Participant Dashboard to:
+
+- View all registered events.
+- View registration details.
+- View registration IDs.
+- Track your event registration history.
+
+---
+
+### Organizer Workflow
+
+#### 1. Login
+
+Navigate to the **Login** page and select **Login as Organizer**.
+
+Use the default organizer credentials:
 
 | Field | Value |
 |--------|-------|
 | Email | admin@techfest.com |
 | Password | admin123 |
+
+#### 2. Organizer Dashboard
+
+After successful authentication, the Organizer Dashboard provides access to the following modules.
+
+##### Dashboard
+
+- View total events.
+- View total registered participants.
+- View upcoming events.
+- View completed events.
+- Monitor overall event statistics.
+
+##### Event Management
+
+Organizers can perform complete CRUD operations.
+
+- Create new events.
+- View all events.
+- Update existing event details.
+- Delete events.
+
+Each event includes:
+
+- Event Name
+- Description
+- Date
+- Time
+- Venue
+
+##### Participant Management
+
+View registrations submitted by participants, including:
+
+- Registration ID
+- Participant Name
+- Email Address
+- Contact Number
+- Registered Event
+- Registration Date and Time
+
 ---
+
+## Application Flow
+
+1. Create a participant account.
+2. Login as a Participant or Organizer.
+3. Browse available technical events.
+4. Register for preferred events.
+5. Participants can monitor their registrations through the Participant Dashboard.
+6. Organizers can manage events and registrations through the Organizer Dashboard.
 
