@@ -1,0 +1,276 @@
+/* ===========================
+   MAIN DASHBOARD CONTAINER
+=========================== */
+.org-dashboard {
+  padding-top: 90px; /* navbar space */
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 40px;
+
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #eaf3ff, #fff0f7);
+}
+
+/* ===========================
+   HEADING
+=========================== */
+.org-dashboard h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+/* ===========================
+   STATS BOX CONTAINER
+=========================== */
+.stats-box {
+  display: flex;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* ===========================
+   SINGLE STAT CARD
+=========================== */
+.stat-card {
+  flex: 1;
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  text-align: center;
+
+  border: 2px solid #eee;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+}
+
+.stat-card h3 {
+  color: #444;
+  font-size: 1rem;
+}
+
+.stat-card p {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* ===========================
+   BORDER COLORS
+=========================== */
+.pink {
+  border-color: #ff66c880;
+}
+
+.purple {
+  border-color: #b493ff80;
+}
+
+.blue {
+  border-color: #75a7ff80;
+}
+
+.green {
+  border-color: #8af59c80;
+}
+
+/* ============================
+   PARTICIPANTS TABLE
+============================ */
+.content-box {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  margin-top: 30px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+  border: 1px solid #eee;
+}
+
+.content-box h1 {
+  margin-bottom: 20px;
+  color: #222;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+/* Header */
+.styled-table thead tr {
+  background: linear-gradient(90deg, #6a11cb, #ff66c8);
+  color: white;
+  text-align: left;
+}
+
+.styled-table thead th {
+  padding: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* Rows */
+.styled-table tbody tr {
+  border-bottom: 1px solid #eee;
+  transition: 0.2s;
+}
+
+.styled-table tbody tr:nth-child(even) {
+  background: #faf7ff;
+}
+
+.styled-table tbody tr:hover {
+  background: #ffe7fb;
+  transform: scale(1.01);
+}
+
+/* Cells */
+.styled-table td {
+  padding: 14px;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Empty message */
+.no-data-row td {
+  text-align: center;
+  padding: 25px;
+  color: #777;
+  font-size: 16px;
+}
+
+/* ============================
+   EVENT PAGE LAYOUT
+============================= */
+
+.event-layout {
+  display: flex;
+  gap: 30px;
+}
+
+/* LEFT SIDE FORM CONTAINER */
+.event-form-section {
+  flex: 1;
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Form title */
+.event-form-section h2 {
+  margin-bottom: 20px;
+}
+
+/* REAL FORM */
+.event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* INPUT AND TEXTAREA */
+.event-form input,
+.event-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1.5px solid #ccc;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.event-form input:focus,
+.event-form textarea:focus {
+  border-color: #6a11cb;
+}
+
+.event-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* ADD EVENT BUTTON */
+.add-btn {
+  padding: 12px;
+  background: linear-gradient(90deg, #6a11cb, #ff66c8);
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add-btn:hover {
+  opacity: 0.8;
+}
+
+/* RIGHT SIDE TABLE */
+.event-list-section {
+  flex: 1;
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.event-list-section h2 {
+  margin-bottom: 20px;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.popup-box {
+  width: 400px;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #00000050;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.popup-box input,
+.popup-box textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.save-btn {
+  background: #6a11cb;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.close-btn {
+  background: #ff4d4d;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

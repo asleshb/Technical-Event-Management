@@ -1,0 +1,106 @@
+.login-portal-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fff0f5, #f5f7ff);
+}
+
+.login-portal-container {
+  text-align: center;
+  max-width: 900px;
+  width: 90%;
+}
+
+.login-portal-container h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.login-portal-container p {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.login-portal-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.portal-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 40px 30px;
+  width: 320px;
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.portal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.portal-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+}
+
+.portal-icon.participant {
+  background: #ffe6f0;
+  color: #ff007f;
+}
+
+.portal-icon.organizer {
+  background: #ede7ff;
+  color: #7d3cff;
+}
+
+.portal-card h2 {
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.portal-card p {
+  color: #666;
+  margin-bottom: 25px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.portal-btn {
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.participant-btn {
+  background: linear-gradient(90deg, #ff3b9d, #7d3cff);
+}
+
+.organizer-btn {
+  background: linear-gradient(90deg, #7d3cff, #ff3b9d);
+}
+
+.portal-btn:hover {
+  opacity: 0.9;
+}
+
+
+
